@@ -1,0 +1,115 @@
+@import "./reset.scss";
+
+body{
+  background: #DCE6D1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone{
+  background-color: black;
+  border-radius: 50px;
+  height: 95%;
+  width: 420px;
+  padding: 50px 20px;
+  box-sizing: border-box;
+}
+
+.header{
+  overflow-x:scroll;
+  .header__list{
+    display:flex;
+    gap: 10px;
+    color: white;
+    width: max-content;
+    .header__list-item{
+      border: 2px solid rgba($color: #FFF, $alpha:0.5);
+      padding: 10px;
+      border-radius: 20px;
+    }
+    .header__list-item--invented{
+      background-color: white;
+      color:black;
+    }
+    
+  }
+}
+
+.cards{
+  overflow-y:scroll;
+  height:90%;
+  margin:20px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  .cards__card{
+    border-radius: 15px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+
+    .card__title{
+      font-size: 25px;
+    }
+
+    .card__footer{
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span{
+        border-radius: 20px;
+        padding: 5px 10px;
+        border: 1px solid black;
+      }
+
+      .price{
+        background-color: pink;
+      }
+
+      .length {
+        background-color: white;
+      }
+    }
+  
+    &:first-child {
+      background-color: #23272A;
+      border: 1px solid white;
+      .card__title {
+        color: white;
+      }
+
+    }
+
+    &:nth-child(2) {
+      background-color: #F2F0EB;
+    }
+
+    &:nth-child(3) {
+      background-color:#F5FDA9;
+    }
+
+    &:nth-child(4) {
+      background-color: #A38EF1;
+    }
+
+    &:nth-child(5) {
+      background-color: #FDCDCD;
+    }
+
+    &:nth-child(6) {
+      background-color: #C6FFD5;
+    }
+  
+    &:nth-child(3n) {
+      grid-column: span 2;
+    }
+ 
+  }
+
+}
